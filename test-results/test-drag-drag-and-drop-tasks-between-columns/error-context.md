@@ -1,0 +1,67 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - heading "🎛️ Mission Control" [level=1] [ref=e5]
+      - generic [ref=e7]:
+        - generic [ref=e8]: 🔍
+        - textbox "Search anything..." [ref=e9]
+      - generic [ref=e10]:
+        - button "⏸️ Pause" [ref=e12] [cursor=pointer]
+        - generic [ref=e13]: R
+    - generic [ref=e14]:
+      - navigation [ref=e15]:
+        - button "📋 Tasks" [ref=e16] [cursor=pointer]:
+          - generic [ref=e17]: 📋
+          - generic [ref=e18]: Tasks
+        - button "🎬 Content" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: 🎬
+          - generic [ref=e21]: Content
+        - button "📅 Calendar" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: 📅
+          - generic [ref=e24]: Calendar
+        - button "🧠 Memory" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: 🧠
+          - generic [ref=e27]: Memory
+        - button "👥 Team" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: 👥
+          - generic [ref=e30]: Team
+        - button "🏢 Office" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: 🏢
+          - generic [ref=e33]: Office
+      - main [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - heading "Tasks" [level=2] [ref=e38]
+              - generic [ref=e39]:
+                - generic [ref=e40]: "📅 This week: 2"
+                - generic [ref=e41]: "🔥 In progress: 2"
+                - generic [ref=e42]: "📊 Total: 2"
+                - generic [ref=e43]: ✓ 0%
+            - button "+ New Task" [ref=e44] [cursor=pointer]
+          - generic [ref=e45]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: 🤔 To Do
+              - generic [ref=e49]: "0"
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - generic [ref=e52]: 🔥 In Progress
+                - generic [ref=e53]: "2"
+              - generic [ref=e54]:
+                - textbox [active] [ref=e56]: Set up Mission Control
+                - generic [ref=e57]:
+                  - generic [ref=e58]: 🤖 Claw
+                  - button "🗑️" [ref=e59] [cursor=pointer]
+              - generic [ref=e60]:
+                - textbox [ref=e62]: Review eatmacandcheese.com
+                - generic [ref=e63]:
+                  - generic [ref=e64]: 👤 Me
+                  - button "🗑️" [ref=e65] [cursor=pointer]
+            - generic [ref=e67]:
+              - generic [ref=e68]: ✅ Done
+              - generic [ref=e69]: "0"
+  - alert [ref=e70]
+```
