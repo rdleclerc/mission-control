@@ -80,7 +80,8 @@ function Column({
   onUpdate, 
   onDelete,
   onDragOver,
-  onDrop 
+  onDrop,
+  onDragStart
 }: { 
   id: ColumnType;
   title: string;
@@ -89,6 +90,7 @@ function Column({
   onDelete: (id: number) => void;
   onDragOver: (e: React.DragEvent) => void;
   onDrop: (e: React.DragEvent) => void;
+  onDragStart: (e: React.DragEvent, taskId: number) => void;
 }) {
   return (
     <div 
@@ -189,7 +191,6 @@ export default function MissionControl() {
   };
 
   const handleDragStart = (e: React.DragEvent, taskId: number) => {
-    console.log('handleDragStart set:', taskId);
     draggedTaskRef.current = taskId;
     e.dataTransfer.effectAllowed = 'move';
   };
@@ -202,7 +203,6 @@ export default function MissionControl() {
   const handleDrop = (e: React.DragEvent, newStatus: ColumnType) => {
     e.preventDefault();
     const taskId = draggedTaskRef.current;
-    console.log('Drop:', taskId, 'to', newStatus);
     if (taskId) {
       const task = tasks.find(t => t.id === taskId);
       if (task && task.status !== newStatus) {
@@ -291,6 +291,7 @@ export default function MissionControl() {
                   onDelete={deleteTask}
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, 'todo')}
+                  onDragStart={handleDragStart}
                 />
                 <Column 
                   id="in-progress" 
@@ -300,6 +301,7 @@ export default function MissionControl() {
                   onDelete={deleteTask}
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, 'in-progress')}
+                  onDragStart={handleDragStart}
                 />
                 <Column 
                   id="done" 
@@ -309,6 +311,7 @@ export default function MissionControl() {
                   onDelete={deleteTask}
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, 'done')}
+                  onDragStart={handleDragStart}
                 />
               </div>
             </div>
