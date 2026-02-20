@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
-const supabaseUrl = 'https://your-project.supabase.co';
-const supabaseKey = 'YOUR_SERVICE_ROLE_KEY_HERE';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY || '';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
