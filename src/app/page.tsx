@@ -106,7 +106,7 @@ function Column({
           task={task} 
           onUpdate={onUpdate}
           onDelete={onDelete}
-          onDragStart={() => {}}
+          onDragStart={handleDragStart}
         />
       ))}
     </div>
@@ -281,7 +281,7 @@ export default function MissionControl() {
               </div>
               
               <div className="kanban">
-                <div style={{display:"none"}}/<Column 
+                <Column 
                   id="todo" 
                   title="🤔 To Do" 
                   tasks={todoTasks} 
@@ -290,7 +290,7 @@ export default function MissionControl() {
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, 'todo')}
                 />
-                <div style={{display:"none"}}/<Column 
+                <Column 
                   id="in-progress" 
                   title="🔥 In Progress" 
                   tasks={inProgressTasks} 
@@ -299,7 +299,7 @@ export default function MissionControl() {
                   onDragOver={handleDragOver}
                   onDrop={(e) => handleDrop(e, 'in-progress')}
                 />
-                <div style={{display:"none"}}/<Column 
+                <Column 
                   id="done" 
                   title="✅ Done" 
                   tasks={doneTasks} 
