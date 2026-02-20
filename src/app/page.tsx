@@ -189,6 +189,7 @@ export default function MissionControl() {
   };
 
   const handleDragStart = (e: React.DragEvent, taskId: number) => {
+    console.log('handleDragStart set:', taskId);
     draggedTaskRef.current = taskId;
     e.dataTransfer.effectAllowed = 'move';
   };
@@ -201,6 +202,7 @@ export default function MissionControl() {
   const handleDrop = (e: React.DragEvent, newStatus: ColumnType) => {
     e.preventDefault();
     const taskId = draggedTaskRef.current;
+    console.log('Drop:', taskId, 'to', newStatus);
     if (taskId) {
       const task = tasks.find(t => t.id === taskId);
       if (task && task.status !== newStatus) {
