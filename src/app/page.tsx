@@ -108,7 +108,7 @@ function Column({
           task={task} 
           onUpdate={onUpdate}
           onDelete={onDelete}
-          onDragStart={handleDragStart}
+          onDragStart={onDragStart}
         />
       ))}
     </div>
