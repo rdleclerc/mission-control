@@ -3,6 +3,9 @@ import { NextResponse } from 'next/server';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://your-project.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY || '';
 
+console.log('SUPABASE_URL:', supabaseUrl);
+console.log('SUPABASE_KEY:', supabaseKey ? 'set' : 'missing');
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const table = searchParams.get('table') || 'tasks';
